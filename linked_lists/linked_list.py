@@ -1,16 +1,4 @@
-class DataNode:
-    def __init__(self, data):
-        self.data = data
-        self.__next_elem = None
-
-    def set_next_elem(self, new_element):
-        self.__next_elem = new_element
-
-    def get_next_elem(self):
-        return self.__next_elem
-
-    def __str__(self):
-        return str(self.data)
+from linked_lists.linked_node import LinkedNode
 
 
 class LinkedList:
@@ -18,7 +6,7 @@ class LinkedList:
         self.__head = None
 
     def add(self, new_data):
-        new_element = DataNode(new_data)
+        new_element = LinkedNode(new_data)
         if self.__head is None:
             self.__head = new_element
         else:

@@ -1,13 +1,15 @@
-from linked_lists.linked_list import DataNode, LinkedList
+from linked_lists.linked_list import LinkedList
+from linked_lists.linked_node import LinkedNode
 
 
 class QueueLinkedList(LinkedList):
     def __init__(self):
+        super().__init__()
         self.__head = None
         self.__tail = None
 
     def add(self, new_data):
-        new_element = DataNode(new_data)
+        new_element = LinkedNode(new_data)
         if self.__head is None:
             self.__head = new_element
         else:
