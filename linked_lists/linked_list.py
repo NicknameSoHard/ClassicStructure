@@ -6,7 +6,7 @@ class LinkedList:
         self.__head = None
         self.__tail = None
 
-    def add(self, new_data):
+    def append(self, new_data):
         new_element = LinkedNode(new_data)
         if self.__head is None:
             self.__head = new_element

@@ -7,7 +7,7 @@ from linked_lists.queue_linked_list import QueueLinkedList
 def check_creation_structure(struct, list_size=10):
     s = struct()
     for i in range(list_size):
-        s.add(i)
+        s.append(i)
     return s
 
 
