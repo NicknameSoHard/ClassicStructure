@@ -4,16 +4,15 @@ from linked_lists.linked_node import LinkedNode
 class LinkedList:
     def __init__(self):
         self.__head = None
+        self.__tail = None
 
     def add(self, new_data):
         new_element = LinkedNode(new_data)
         if self.__head is None:
             self.__head = new_element
         else:
-            last_node = None
-            for node in self.__collection_iterator():
-                last_node = node
-            last_node.set_next_elem(new_element)
+            self.__tail.set_next_elem(new_element)
+        self.__tail = new_element
 
     def __collection_iterator(self):
         next_elem = self.__head
