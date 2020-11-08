@@ -1,7 +1,6 @@
 from queue import Queue
 
-from linked_lists.linked_list import LinkedList
-from linked_lists.queue_linked_list import QueueLinkedList
+from linked_lists import LinkedList, QueueLinkedList
 
 
 def check_creation_structure(struct, list_size=10):
