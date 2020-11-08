@@ -1,7 +1,8 @@
+from linked_lists.linked_list import LinkedList
 from linked_lists.linked_node import LinkedNode
 
 
-class QueueLinkedList:
+class QueueLinkedList(LinkedList):
     def __init__(self):
         self.__head = None
         self.__tail = None

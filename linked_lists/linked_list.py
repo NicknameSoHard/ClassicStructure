@@ -14,7 +14,7 @@ class LinkedList:
             self.__tail.set_next_elem(new_element)
         self.__tail = new_element
 
-    def __collection_iterator(self):
+    def __iter__(self):  # renamed __collection_iterator method
         next_elem = self.__head
         while True:
             if next_elem is None:
@@ -32,7 +32,7 @@ class LinkedList:
             return value
         else:
             last_node = self.__head
-            for index, node in enumerate(self.__collection_iterator()):
+            for index, node in enumerate(self):
                 if index == removed_index:
                     next_node = node.get_next_elem()
                     last_node.set_next_elem(next_node)
@@ -41,10 +41,10 @@ class LinkedList:
         raise ValueError('Index not found!')
 
     def find_by_values(self, values):
-        for node in self.__collection_iterator():
+        for node in self:
             if node.data == values:
                 return node
         return None
 
     def __str__(self):
-        return ','.join([str(node) for node in self.__collection_iterator()])
+        return ','.join([str(node) for node in self])
